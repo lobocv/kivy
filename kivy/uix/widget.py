@@ -523,7 +523,7 @@ class Widget(WidgetBase):
             canvas_parent_index = self.parent.canvas.indexof(self.canvas)
             self.parent.canvas.remove(self.canvas)
 
-        fbo = Fbo(size=self.size)
+        fbo = Fbo(size=self.size, with_stencilbuffer=True)
 
         with fbo:
             ClearColor(0, 0, 0, 1)
